@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mutia & Fahmi</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+</head>
+
+<body>
+    <!-- LETTER -->
+    <section id="letter" class="z-3 container d-inline-block py-5 vh-100 text-white text-center fw-ligth">
+        <div class="w-75 mx-auto mb-1" data-aos="zoom-in-up" data-aos-duration="2000">
+            <img src="images/revisi/weddingof.png" class="img-fluid" alt="">
+        </div>
+        <p class="letter-mutia-fahmi mb-0 fw-semibold mb-5 pb-5" data-aos="zoom-in-down" data-aos-duration="2000">
+            Mutia
+            & Fahmi</p>
+        <p class="fs-6 mb-2 lh-sm pt-5" style="margin-top: 45%;" data-aos="zoom-in-up" data-aos-duration="2000">Kepada
+            Yth.<br>Bpk/Ibu/Saudara/i
+        </p>
+        <p class="mb-3 fs-5" data-aos="zoom-in-up" data-aos-duration="2000">
+            <%= q || 'Tamu Undangan' %>
+        </p>
+        <button class="letter-btn btn btn-sm btn-light rounded-5" data-aos="zoom-in-up" data-aos-duration="2000">Buka
+            Undangan</button>
+    </section>
+
+    <audio id="backgroundMusic" preload="auto" loop>
+        <source src="/audio/audio.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Use the icon as a button -->
+    <div id="toggleMusicBtn" class="z-2 song position-fixed opacity-75 fs-1 ms-2 mt-1">
+        <i class="bi bi-disc text-white"></i>
+    </div>
+
+    <script>
+        const letterSection = document.querySelector('#letter');
+        const music = document.getElementById('backgroundMusic');
+        const toggleMusicBtn = document.getElementById('toggleMusicBtn');
+
+        document.querySelector('.letter-btn').addEventListener('click', () => {
+            letterSection.setAttribute('data-aos', 'slide-down');
+            window.scrollTo({
+                top: 0,
+                behavior: 'instant'
+            });
+
+            // Play the music
+            music.play();
+            toggleMusicBtn.querySelector('i').classList.remove('bi-disc');
+            toggleMusicBtn.querySelector('i').classList.add('bi-pause-circle');
+        });
+
+        toggleMusicBtn.addEventListener('click', () => {
+            // Toggle between play and pause
+            if (music.paused) {
+                music.play();
+                toggleMusicBtn.querySelector('i').classList.remove('bi-disc');
+                toggleMusicBtn.querySelector('i').classList.add('bi-pause-circle');
+            } else {
+                music.pause();
+                toggleMusicBtn.querySelector('i').classList.remove('bi-pause-circle');
+                toggleMusicBtn.querySelector('i').classList.add('bi-disc');
+            }
+        });
+    </script>
+
+
+    <!-- HOME -->
+    <section id="home" class="container py-5 text-white text-center vh-100">
+        <p class="home-mutia-fahmi mb-2" style="color: #D7C6B2;">Mutia & Fahmi</p>
+        <p class="home-jadwal">03 MARET 2024 . MAKASSAR</p>
+    </section>
+
+
+
+    <!-- MEMPELAI -->
+    <section id="mempelai" class="container pb-5 pt-4 text-white text-center">
+        <div class="mb-4" data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="mempelai-title fs-3 mb-3 mt-2">WE ARE GETTING MARRIED</h1>
+            <p class="paragraph px-4" data-aos="fade-up" data-aos-duration="2000">Mahasuci Allah telah menciptakan makhluk
+                hidup dengan berpasang-pasangan. Begitu
+                pula manusia. Sungguh besar rahmat dan karunia yang diberikan-Nya kepada keluarga kami.</p>
+            <p class="paragraph px-4" data-aos="fade-up" data-aos-duration="2000">Maka izinkan kami mengundang sekaligus
+                mengharapkan doa restu dari bapak/ibu dan
+                saudara/i dalam acara pernikahan kami.</p>
+        </div>
+        <div class="mempelai-wanita py-4 rounded-3 mb-2" data-aos="fade-right" data-aos-duration="2000">
+            <img src="images/revisi/muti.jpg"  class="img-fluid mb-3 w-75" alt="">
+            <p class="nama-mempelai fs-1 mb-2 mt-2 fw-medium" data-aos="flip-left" data-aos-duration="2000">Mutiah
+                Humaerah</p>
+            <div class="paragraph lh-2" data-aos="fade" data-aos-duration="2000">
+                <p>Putri dari pasangan:<br>
+                    Bapak H. Mashuri, S.Sos & Ibu Hj. Rusmini, S.Pd</p>
+            </div>
+            <a href="https://www.instagram.com/mutmutimutia/" class="btn btn-sm btn-light fw-semibold"
+                data-aos="zoom-in" data-aos-duration="2000"><i class="bi bi-instagram"></i> Instagram</a>
+        </div>
+        <div class="mempelai-pria py-4 rounded-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src="images/revisi/fahmi.jpg" class="img-fluid mb-3 w-75" alt="">
+            <p class="nama-mempelai fs-1 mb-2 mt-2 fw-medium" data-aos="flip-right" data-aos-duration="2000">Fahmi Muh
+                Faqi
+            </p>
+            <div class="paragraph lh-2" data-aos="fade" data-aos-duration="2000">
+                <p>Putra dari pasangan:<br>
+                    Bapak Amlan, S.AN & Ibu Dasna, S.Pd</p>
+            </div>
+            <a href="https://www.instagram.com/fahmimuhfaqi/" class="btn btn-sm btn-light fw-semibold"
+                data-aos="zoom-in" data-aos-duration="2000"><i class="bi bi-instagram"></i> Instagram</a>
+        </div>
+    </section>
+
+    <section id="schedule" class="container py-5 text-white text-center">
+        <div class="px-1">
+            <p class="fs-3" data-aos="zoom-in" data-aos-duration="2000">
+                وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ
+                بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ</p>
+            <p class="paragraph fst-italic" data-aos="fade-up" data-aos-duration="2000">wa min âyâtihî an khalaqa lakum
+                min
+                anfusikum azwâjal litaskunû ilaihâ wa ja‘ala bainakum mawaddataw wa
+                raḫmah, inna fî dzâlika la'âyâtil liqaumiy yatafakkarûn</p>
+            <p class="paragraph" data-aos="fade-up" data-aos-duration="2000">"Di antara tanda-tanda (kebesaran)-Nya
+                ialah bahwa Dia menciptakan pasangan-pasangan
+                untukmu dari (jenis)
+                dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih
+                sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum
+                yang berpikir."</p>
+            <p data-aos="fade-up" data-aos-duration="2000">~ &lpar;QS. Ar Rum:21&rpar; ~</p>
+            <div data-aos="zoom-in-down" data-aos-duration="2000">
+                <script class="779b31e1943f049b99f2dc8e38750c12"
+                    src="https://w.promofeatures.com/js/timer/779b31e1943f049b99f2dc8e38750c12.js?v=1708418838"></script>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="container py-5 text-white text-center">
+
+        <div class="schedule-bg py-5 rounded-3" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="mb-4" data-aos="fade-left" data-aos-duration="2000">
+                <h1 class="fs-2">AKAD NIKAH</h1>
+                <p class="mb-1">Ahad, 03 MARET 2024</p>
+                <p>10.00 WITA</p>
+            </div>
+            <div class="mb-4" data-aos="fade-right" data-aos-duration="2000">
+                <h1 class="fs-2">RESEPSI</h1>
+                <p class="mb-1">Ahad, 03 MARET 2024</p>
+                <p>11.00 &#8212; 14.00 WITA</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <h1 class="fs-2">LOKASI</h1>
+                <p class="mb-1">Balla Lompoa Ballroom<br>Hotel Harper Perintis Makassar</p>
+                <p class="px-5" style="font-size: 12px;">Jl. Perintis Kemerdekaan KM 15 No.14A,<br>Kota Makassar</p>
+                <iframe class="img-fluid"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.0595014143187!2d119.50937297451695!3d-5.0940822516429085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbefb870b5e4061%3A0xe80422ff50cdb547!2sHARPER%20Perintis%20Makassar!5e0!3m2!1sid!2sid!4v1708012738378!5m2!1sid!2sid"
+                    style="border:0; height: 250px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <img src="images/revisi/break-section.jpg" class="img-fluid border border-5 border-secondary-subtle" alt=""
+        data-aos="zoom-out-up" data-aos-duration="2000">
+    <!-- RSVP -->
+    <section id="rsvp" class="container py-5 text-white text-center">
+        <div class="rsvp-bg py-4 px-3 rounded-3 mb-2" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="mb-4">
+                <form method="POST" action="/rsvp" class="needs-validation" novalidate>
+                    <h1 class="title fs-2 pt-4 mb-4" style="letter-spacing: 5px; color: #D7C6B2;">RESERVATION</h1>
+                    <div class="mb-4 text-start">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="name" class="form-control opacity-75" id="nama" name="nama" required>
+                    </div>
+                    <div class="mb-5 pb-5 text-start">
+                        <p class="mb-1">Apakah kamu akan hadir?</p>
+                        <div class="form-check ms-4">
+                            <input class="form-check-input" type="radio" value="Hadir" name="statusHadir" id="hadir">
+                            <label class="form-check-label" for="hadir"> Ya, saya akan hadir </label>
+                        </div>
+                        <div class="form-check ms-4">
+                            <input class="form-check-input" type="radio" value="Tidak Hadir" name="statusHadir"
+                                id="tidakHadir">
+                            <label class="form-check-label" for="tidakHadir"> Maaf, saya tidak sempat hadir </label>
+                        </div>
+                    </div>
+                    <div class="mb-4 pt-4 text-start">
+                        <label for="jumlahTamu" class="form-label">Jumlah tamu bersama kamu?</label>
+                        <select class="form-select opacity-75" name="jumlahTamu" aria-label="Select jumlahTamu"
+                            required>
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success fw-semibold w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="rsvp-bg py-4 px-3 rounded-3" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="title fs-2 pt-4 mb-4" style="letter-spacing: 5px; color: #D7C6B2;">WEDDING GIFT</h1>
+            <p class="paragraph">Kehadiran anda merupakan hadiah terbaik yang bisa kami harapkan. Namun jika anda
+                bermaksud untuk
+                mengirimkan hadiah pernikahan lain, silahkan ketuk tombol di bawah ini:</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-light fw-semibold w-100 mb-3" onclick="openModal('exampleModal')">
+                Transfer
+            </button>
+            <button type="button" class="btn btn-light fw-semibold w-100" onclick="openModal('exampleModal2')">
+                Kirim Kado
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div id="exampleModal" class="modal">
+            <div class="modal-content text-black p-3">
+                <p class="close-btn fs-1 d-inline-block me-2" onclick="closeModal('exampleModal')">&times;</p>
+                <p class="mt-5">Silahkan transfer hadiah melalui nomor rekening berikut :</p>
+                <p class="fw-semibold fs-5">Mutiah Humaerah</p>
+                <div class="w-50 mx-auto">
+                    <img class="img-fluid" src="images/revisi/bni.svg" alt="">
+                </div>
+                <p class="fw-semibold fs-5 mt-2">0254792336</p>
+                <p>Sebelumnya, kami ucapkan terima kasih atas perhatian dan bentuk tanda cinta
+                    Bapak/Ibu/Saudara/i untuk kami.</p>
+            </div>
+        </div>
+        <!-- MODAL 2 -->
+        <div id="exampleModal2" class="modal">
+            <div class="modal-content text-black p-3">
+                <p class="close-btn fs-1 d-inline-block me-2" onclick="closeModal('exampleModal2')">&times;</p>
+                <p class="mt-5">Silahkan kirim kado ke alamat berikut :</p>
+                <p class="fw-semibold fs-5">Mutiah Humaerah</p>
+                
+                <p class="fw-semibold fs-5">Tallasa City Cluster Utopia F19, Makassar</p>
+                <p class="fw-semibold fs-5">085255555101</p>
+                <p>Sebelumnya, kami ucapkan terima kasih atas perhatian dan bentuk tanda cinta
+                    Bapak/Ibu/Saudara/i untuk kami.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="container py-5 text-white text-center">
+        <div class="px-1">
+            <h1 class="mb-3" data-aos="zoom-out-up" data-aos-duration="2000">OUR GALLERY</h1>
+            <p class="paragraph mb-4" data-aos="fade-up" data-aos-duration="2000">"Love seems the swiftest but it is the
+                slowest of all growths. No man or woman
+                really knows what perfect love is until they have been married a quarter of a century."</p>
+            <img src="images/revisi/break-section3.jpg" class="img-fluid border border-5 border-secondary-subtle" alt=""
+                data-aos="flip-right" data-aos-duration="2000">
+            <p class="paragraph mt-3" data-aos="fade-up" data-aos-duration="2000">I love you without knowing how, or
+                when, or from where. I love you directly,
+                without
+                problems or pride: I love you like this because I don’t know any other way to love, except in this form
+                in which I am not nor are you, so close that your hand upon my chest is mine, so close that your eyes
+                close with my dreams.</p>
+            <img src="images/revisi/gallery.png" class="img-fluid" alt="" data-aos="zoom-in-down"
+                data-aos-duration="2000">
+        </div>
+    </section>
+
+    <!-- BEST WISHES -->
+    <section id="rsvp" class="container py-5 text-white text-center">
+        <div class="rsvp-bg py-4 px-3 rounded-3 mb-2" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="mb-4">
+                <form method="POST" action="/wishes" class="needs-validation" novalidate>
+                    <h1 class="wish-title fs-1 mb-3">Best Wishes</h1>
+                    <p class="paragraph mb-4">Berikan ucapan kepada kedua mempelai</p>
+                    <div class="mb-3 text-start">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="name" class="form-control opacity-75" id="nama" name="nama" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="wish" class="form-label">Tulis Ucapan</label>
+                        <textarea class="form-control opacity-75" id="wish" rows="3" name="wish" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
+                </form>
+                <div class="container mt-4 py-3 rounded-4 bg-light text-start"
+                    style="font-size: small; overflow: auto; max-height: 350px;" data-aos="zoom-in"
+                    data-aos-duration="2000">
+                    <% for(let wish of wishes) { %>
+                        <div class="card mb-3 shadow-sm">
+                            <div class="card-body" style="font-size: small;">
+                                <p class="card-title fw-semibold">
+                                    <%= wish.nama %> <span class="fw-normal text-secondary"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                fill="currentColor" class=" bi bi-clock" viewBox="0 0 16 22">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                                            </svg>
+                                            <%= wish.created_at %>
+                                        </span>
+                                </p>
+                                <p class="card-text">
+                                    <%= wish.wish %>
+                                </p>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- THANK YOU -->
+    <section id="thank-you" class="container py-5 text-dark text-center px-5" style="height: 720px;"
+        data-aos="zoom-in-down" data-aos-duration="1500">
+        <p class="home-mutia-fahmi mb-2 fs-1" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">Terima Kasih
+        </p>
+        <p class="home-mutia-fahmi" style="font-size: 13px;" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1000">Atas
+            kehadiran dan do'a restu bapak/ibu dan saudara/i yang hadir, kami sampaikan terima
+            kasih.</p>
+        <p class="home-mutia-fahmi fs-6 mb-0" data-aos="fade-down-left" data-aos-duration="2000" data-aos-delay="1500">
+            Kami yang berbahagia,</p>
+        <p class="home-mutia-fahmi mb-2 mt-0 fs-2" data-aos="fade-up-right" data-aos-duration="2000"
+            data-aos-delay="1500">~Mutia & Fahmi~</p>
+    </section>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    <script src="js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init();
+        });
+
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = 'none';
+        }
+
+        // Close the modal if the overlay is clicked
+        window.onclick = function (event) {
+            if (event.target.className == 'modal') {
+                event.target.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+
+</html>

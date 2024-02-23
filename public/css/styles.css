@@ -1,0 +1,281 @@
+/* font-family: "Lora", serif; */
+/* font-family: "Great Vibes", cursive; */
+/* body {
+    font-family: "Lora", serif;
+}
+
+.mempelai {
+    font-family: "Great Vibes", cursive;
+    font-size: 3rem;
+    color: goldenrod;
+}
+
+#letter-landing {
+    background-image: url('../images/letter.jpg');
+    background-size: cover ;
+    background-position: bottom;
+}
+
+#letter-landing-bg {
+    background-image: url('../images/letter-bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.title {
+    font-size: 0.9em;
+}
+
+.nama-gelar {
+    font-size: small;
+    margin-top: 130px;
+}
+
+#first-page {
+    background-image: url('../images/home.jpg');
+    background-size: 125%;
+    background-position: bottom;
+}
+
+#first-page-bg {
+    background-image: url('../images/mutifahmi2.jpg');
+    background-size: cover;
+}
+
+.ayat {
+    font-family: 'Lemonada', cursive;
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+.date {
+    margin-bottom: 100%;
+}
+
+.mempelai-pria {
+    background-image: url('../images/fahmi.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.mempelai-pria .mempelai-div {
+    margin-top: 50%
+}
+.mempelai {
+    color: white;
+}
+
+.mempelai-wanita {
+    background-image: url('../images/muti.jpg');
+    background-size: cover;
+}
+
+.mempelai-wanita .mempelai-div {
+    margin-top: 50%
+}
+
+.card-text {
+    font-size: 0.8em;
+}
+
+#second-page {
+    background-image: url('../images/schedule.jpg');
+    background-size: 130%;
+    background-position: bottom;
+}
+
+#second-page-bg {
+    background-image: url('../images/mutifahmi2.jpg');
+    background-size: cover;
+}
+
+.salam, .wish-title {
+    font-family: 'Great Vibes', cursive;
+}
+
+.invitation p {
+    font-size: 0.85em
+}
+
+#rsvp {
+    background-image: url('../images/rsvp.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#rsvp-bg {
+    background-image: url('../images/mutifahmi2.jpg');
+    background-size: cover;
+}
+
+#wishes {
+    background-image: url('../images/rsvp.jpg');
+    background-size: cover;
+}
+
+#wishes-bg {
+    background-image: url('../images/mutifahmi2.jpg');
+    background-size: cover;
+}
+
+#thank-you {
+    background-image: url('../images/mutifahmi.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#gallery-page {
+    font-family: 'Lemonada', sans-serif;
+}
+
+#gallery-page .gallery-title {
+    font-family: 'Lora', serif;
+} */
+
+/* HOMEFIX REVISI */
+.paragraph {
+    font-size: 12px;
+}
+
+#svg {
+    transform: rotate(0deg);
+}
+
+#svg text {
+    text-anchor: middle;
+    fill: black;
+    font-size: 16px;
+    offset: 50%;
+}
+
+#letter {
+    background-image: url(../images/revisi/home.jpg);
+    background-size: cover;
+    background-position: bottom;
+    font-family: 'Merriweather', serif;
+    transition: transform 0.5s ease-out;
+    position: fixed;
+}
+
+.letter-pernikahan {
+    letter-spacing: 7px;
+}
+
+.letter-mutia-fahmi,
+.home-mutia-fahmi {
+    font-size: 2.3em;
+    letter-spacing: 2px;
+    font-family: 'Gilda Display', serif;
+}
+
+.home-jadwal {
+    letter-spacing: 3px;
+    font-size: 0.9em;
+}
+
+#home {
+    background-image: url(../images/revisi/home.jpg);
+    background-size: cover;
+    background-position: bottom;
+    font-family: 'Gilda Display', serif;
+}
+
+.ayat-title {
+    margin-top: 360px;
+}
+
+#mempelai {
+    background-color: rgba(50, 39, 19, 0.86);
+    font-family: 'Gilda Display', serif;
+}
+
+#mempelai .nama-mempelai {
+    letter-spacing: 2px;
+    color: #D7C6B2;
+}
+
+#mempelai .mempelai-title {
+    letter-spacing: 3px;
+    color: #D7C6B2;
+}
+
+#mempelai .mempelai-wanita {
+    background-image: url(../images/revisi/mempelai-bg1.jpg);
+    background-size: cover;
+}
+
+#mempelai .mempelai-pria {
+    background-image: url(../images/revisi/mempelai-bg2.jpg);
+    background-size: cover;
+}
+
+#mempelai img {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#mempelai button {
+    letter-spacing: 1px;
+    background-color: #D7C6B2;
+    color: #4F3200;
+}
+
+#schedule,
+#rsvp {
+    background-color: rgba(50, 39, 19, 0.86);
+    font-family: 'Gilda Display', serif;
+}
+
+#schedule .schedule-bg,
+.rsvp-bg {
+    background-image: url(../images/revisi/background.jpg);
+    background-size: cover;
+    letter-spacing: 2px;
+}
+
+#schedule h1 {
+    color: #D7C6B2
+}
+
+.rsvp-bg {
+    background-image: url(../images/revisi/background.jpg);
+    background-size: cover;
+    font-family: 'Gilda Display', serif;
+}
+
+.rsvp-bg button {
+    letter-spacing: 2px;
+}
+
+.modal {
+    font-family: Helvetica;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#thank-you {
+    background-image: url(../images/revisi/thank-you.jpg);
+    background-size: cover;
+}

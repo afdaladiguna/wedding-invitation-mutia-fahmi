@@ -1,0 +1,28 @@
+{
+  "name": "wedding-invitation-mutiah-fahmi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.4.1",
+    "ejs": "^3.1.9",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-session": "^1.18.0",
+    "joi": "^17.12.1",
+    "mongoose": "^8.1.1",
+    "path": "^0.12.7",
+    "sanitize-html": "^2.11.0",
+    "session": "^0.1.0"
+  }
+}
